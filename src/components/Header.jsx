@@ -7,8 +7,13 @@ export default function Header() {
     const budget = useContext(BudgetContext)
     console.log(budget);
 
+
     function budgetModeOn() {
-        budget.setBudgetMode(true)
+        if (budget.budgetMode) {
+            budget.setBudgetMode(false)
+        } else {
+            budget.setBudgetMode(true)
+        }
     }
     return (
         <header>
@@ -27,7 +32,9 @@ export default function Header() {
                         <li>
                             <NavLink to="/about">About Us</NavLink>
                         </li>
-                        <button className="btn btn-dark" onClick={budgetModeOn}>Budget Mode</button>
+                        <button className="btn btn-dark" onClick={budgetModeOn}>
+                            {budget.budgetMode ? "Disattiva Modalità Budget" : "Attiva Modalità Budget"}
+                        </button>
                     </ul>
                 </div>
                 <div>
