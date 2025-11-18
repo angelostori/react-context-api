@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*========================================================*/
+/*_________________________HEADER_________________________*/
+/*========================================================*/
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fafafa;
+  height: 100px;
+}
+
+header nav div {
+  display: flex;
+}
+
+header nav div ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+}
+
+header nav div ul li {
+  list-style: none;
+}
+
+header nav div ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #1c486f;
+
+  border: transparent solid 3px;
+  border-radius: 14px;
+  padding: 5px;
+
+}
+
+header nav div ul li :hover {
+  border: #1c486f solid 3px;
+  border-radius: 14px;
+  padding: 5px;
+  background-color: #ef8120;
+}
+
+/*========================================================*/
+/*_________________________FOOTER_________________________*/
+/*========================================================*/
+
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #fafafa;
+}
+
+footer h5 {
+  color: #1c486f;
+}
+
+footer a {
+  color: #1c486f;
+  font-size: 13px
+}
+
+/*========================================================*/
+/*_________________________JUMBO______________________*/
+/*========================================================*/
+
+.jumbo {
+  background-color: #ef8120;
+  color: #1c486f;
+}
+
+/*========================================================*/
+/*_________________________PRODUCTS______________________*/
+/*========================================================*/
+
+.prods img {
+  height: 200px;
+  object-fit: contain;
+}
+
+.prods .card-title {
+  font-size: 0.9rem;
+}
+
+/*========================================================*/
+/*_________________________PRODUCT______________________*/
+/*========================================================*/
+
+.prod button {
+  font-weight: 500;
+  color: #1c486f;
+  background-color: transparent;
+  border: transparent solid 3px;
+  border-radius: 14px;
+  padding: 5px;
+  margin: 1rem;
+}
+
+.prod button:hover {
+  border: #1c486f solid 3px;
+  border-radius: 14px;
+  padding: 5px;
+  background-color: white;
+}
