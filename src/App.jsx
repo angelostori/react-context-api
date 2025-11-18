@@ -1,15 +1,19 @@
-import { BrowserRouter, Routes, Route, useContext } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react"
 import Layout from "./Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Products from "./pages/Products";
 import Product from "./pages/Product";
-import { BudgetContext } from "./contexts/BudgetContext";
+import BudgetContext from "./contexts/BudgetContext";
 
 
 export default function App() {
+
+  const [budgetMode, setBudgetMode] = useState(false)
+
   return (
-    <BudgetContext.Provider value={"{budgetMode, setBudgetMod}"}>
+    <BudgetContext.Provider value={{ budgetMode, setBudgetMode }}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>
