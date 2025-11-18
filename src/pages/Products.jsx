@@ -22,13 +22,14 @@ export default function Products() {
     // console.log(budget);
     const budgetMode = budget.budgetMode;
 
+    const filteredProducts = budgetMode ? products.filter(p => p.price <= 30) : products;
 
     return (
         <div className="jumbo prods">
             <div className="container">
                 <h1 className="mb-4">I nostri Prodotti</h1>
                 {loading ? <div className="row">
-                    {products.map((prod) => (
+                    {filteredProducts.map((prod) => (
                         <div key={prod.id} className="col-12 col-md-4 col-lg-3 mb-4">
                             <div className="card h-100">
                                 <img
