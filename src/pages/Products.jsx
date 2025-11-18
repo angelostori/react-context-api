@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { DotWave } from 'ldrs/react'
 import 'ldrs/react/DotWave.css'
+import BudgetContext from "../contexts/BudgetContext";
 
 export default function Products() {
     const [products, setProducts] = useState([]);
@@ -16,6 +17,10 @@ export default function Products() {
                 setLoading(true);
             });
     }, []);
+
+    const budget = useContext(BudgetContext);
+    // console.log(budget);
+    const budgetMode = budget.budgetMode;
 
 
     return (
